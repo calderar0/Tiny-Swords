@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://dar6lvbphh0uu"]
+
+[ext_resource type="Texture2D" uid="uid://cnodix6iag8rq" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Blue/Pawn_Blue.png" id="1_4rnfn"]
+[ext_resource type="Texture2D" uid="uid://cyytvprsvkhy8" path="res://addons/Tiny Swords/Factions/Knights/Troops/Dead/Dead.png" id="2_8qf6d"]
+[ext_resource type="Texture2D" uid="uid://dwo7gjt26ms7h" path="res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Archer + Bow/Archer_Blue_(NoArms).png" id="3_qwtto"]
+[ext_resource type="Texture2D" uid="uid://d3ob5fic7e1ah" path="res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Archer + Bow/Archer_Bow_Blue.png" id="4_wjg37"]
+[ext_resource type="Texture2D" uid="uid://cmyqh5v201ot" path="res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Archer + Bow/Archer_Purple_(NoArms).png" id="5_ooj7g"]
+[ext_resource type="Texture2D" uid="uid://bqc56uygpe0dv" path="res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Archer + Bow/Archer_Red_(NoArms).png" id="6_ikvi4"]
+[ext_resource type="Texture2D" uid="uid://b0vx30e0krp32" path="res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Archer + Bow/Archer_Bow_Red.png" id="7_n4t0q"]
+[ext_resource type="Texture2D" uid="uid://bnfmimbh5vcfs" path="res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Blue/Archer_Blue.png" id="8_e37i1"]
+[ext_resource type="Texture2D" uid="uid://belst22gcmpq0" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="9_4ylx5"]
+
+[node name="test_scene" type="Node2D"]
+
+[node name="PawnBlue" type="Sprite2D" parent="."]
+position = Vector2(540, 517)
+texture = ExtResource("1_4rnfn")
+
+[node name="Dead" type="Sprite2D" parent="."]
+position = Vector2(1620, 127)
+texture = ExtResource("2_8qf6d")
+
+[node name="ArcherBlue(noArms)" type="Sprite2D" parent="."]
+position = Vector2(1820, 471)
+texture = ExtResource("3_qwtto")
+
+[node name="ArcherBowBlue" type="Sprite2D" parent="."]
+position = Vector2(2009, 871)
+texture = ExtResource("4_wjg37")
+
+[node name="ArcherPurple(noArms)" type="Sprite2D" parent="."]
+position = Vector2(1436, 1371)
+texture = ExtResource("5_ooj7g")
+
+[node name="ArcherRed(noArms)" type="Sprite2D" parent="."]
+position = Vector2(1990, 1285)
+texture = ExtResource("6_ikvi4")
+
+[node name="ArcherBowRed" type="Sprite2D" parent="."]
+position = Vector2(2026, 679)
+texture = ExtResource("7_n4t0q")
+
+[node name="ArcherBlue" type="Sprite2D" parent="."]
+position = Vector2(736, 2273)
+texture = ExtResource("8_e37i1")
+
+[node name="WarriorBlue" type="Sprite2D" parent="."]
+position = Vector2(2132, 2339)
+texture = ExtResource("9_4ylx5")
