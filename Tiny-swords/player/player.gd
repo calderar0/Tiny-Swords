@@ -4,12 +4,63 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
 
+var input_vector: Vector2 = Vector2(0 , 0)
 var is_running: bool = false
+var was_running: bool = false
 var is_attacking: bool = false
 var attack_cooldown: float = 0.0
 
+var random_up = 1
+var random_up2 = 2
+var random_down = 1
+var random_down2 = 2
+var random_side = 1
+var random_side2 = 2
+
 func _process(delta: float) -> void:
-	#cooldown ataque
+	#le o input
+	read_input()
+	#cooldown
+	update_attack_cooldown(delta)
+	#processa animação e rotação
+	play_run_idle_animation()
+	rotate_sprite()
+	#sistema de ataque
+	if Input.is_action_just_pressed("attack"):
+		attack(input_vector)
+
+func read_input() -> void:
+		#pega a direção e velocidade
+	input_vector = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	#deadzone (isso aqui é por causa do controle pae)
+	var deadzone = 0.15
+	if abs(input_vector.x) < deadzone:
+		input_vector.x = 0
+	if abs(input_vector.y) < deadzone:
+		input_vector.y = 0
+	
+	#muda a var isrunning
+	was_running = is_running
+	is_running = not input_vector.is_zero_approx()
+
+func play_run_idle_animation() -> void:
+			#animação
+	if not is_attacking:
+		if was_running != is_running:
+			if is_running:
+				animation_player.play("run")
+			else:
+				animation_player.play("idle")
+	
+func rotate_sprite() -> void:
+		#gira sprite
+	if input_vector.x > 0:
+		sprite.flip_h = false
+	elif input_vector.x < 0:
+		sprite.flip_h = true
+
+func update_attack_cooldown(delta: float) -> void: 
+		#cooldown ataque
 	if is_attacking:
 		attack_cooldown -= delta
 		if attack_cooldown <= 0:
@@ -18,67 +69,54 @@ func _process(delta: float) -> void:
 			animation_player.play("idle")
 
 func _physics_process(delta: float) -> void:
-	#pega a direção e velocidade
-	var input_vector = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	
-	#deadzone (isso aqui é por causa do controle pae)
-	var deadzone = 0.15
-	if abs(input_vector.x) < deadzone:
-		input_vector.x = 0
-	if abs(input_vector.y) < deadzone:
-		input_vector.y = 0
-		
 	#muda a velocidade
 	var target_velocity = input_vector * speed * 100
 	if is_attacking:
 		target_velocity *= 0.25
 	velocity = lerp(velocity,target_velocity, 0.05)
 	move_and_slide()
-	
-	#muda a var isrunning
-	var was_running = is_running
-	is_running = not input_vector.is_zero_approx()
-	
-	#animação
-	if not is_attacking:
-		if was_running != is_running:
-			if is_running:
-				animation_player.play("run")
-			else:
-				animation_player.play("idle")
-	
-	#gira sprite
-	if input_vector.x > 0:
-		sprite.flip_h = false
-	elif input_vector.x < 0:
-		sprite.flip_h = true
-	
-	#sistema de ataque
-	if Input.is_action_just_pressed("attack"):
-		attack(input_vector)
-	
-	
-	
+
+func up_attack_random_anim() -> void:
+	if random_up != random_up2:
+		animation_player.play("attack_up1")
+		random_up2 = 1
+	else:
+		animation_player.play("attack_up2")
+		random_up2 = 2
+
+func down_attack_random_anim() -> void:
+	if random_down != random_down2:
+		animation_player.play("attack_down1")
+		random_down2 = 1
+	else:
+		animation_player.play("attack_down2")
+		random_down2 = 2
+
+func side_attack_random_anim() -> void:
+	if random_side != random_side2:
+		animation_player.play("attack_side1")
+		random_side2 = 1
+	else:
+		animation_player.play("attack_side2")
+		random_side2 = 2
+
+
 func attack(input_vector) -> void:
 	if is_attacking:
 		return
 	
-	#attack up 1
+	#attack up
 	if input_vector.y < 0:
-		animation_player.play("attack_up1")
+		up_attack_random_anim()
 		attack_cooldown = 0.6
+	#attack down
 	elif input_vector.y > 0:
-		animation_player.play("attack_down1")
+		down_attack_random_anim()
 		attack_cooldown = 0.6
+	#attack side
 	else:
-	#attack side 1
-		animation_player.play("attack_side1")
+		side_attack_random_anim()
 		attack_cooldown = 0.6
-	#attack side 2
-	
-	
-	
 	#marca ataque
 	is_attacking = true
-	
-	
+
