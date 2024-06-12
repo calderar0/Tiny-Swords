@@ -4,12 +4,13 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
 
+#variáveis comuns player
 var input_vector: Vector2 = Vector2(0 , 0)
 var is_running: bool = false
 var was_running: bool = false
 var is_attacking: bool = false
 var attack_cooldown: float = 0.0
-
+#padronização de ataques player
 var random_up = 1
 var random_up2 = 2
 var random_down = 1
@@ -99,7 +100,6 @@ func side_attack_random_anim() -> void:
 	else:
 		animation_player.play("attack_side2")
 		random_side2 = 2
-
 
 func attack(input_vector) -> void:
 	if is_attacking:
