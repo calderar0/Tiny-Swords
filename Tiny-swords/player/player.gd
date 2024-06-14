@@ -19,6 +19,8 @@ var random_side = 1
 var random_side2 = 2
 
 func _process(delta: float) -> void:
+	#game manager
+	GameManager.player_position = position
 	#le o input
 	read_input()
 	#cooldown

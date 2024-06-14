@@ -14,4 +14,13 @@ texture = ExtResource("1_rbugr")
 position = Vector2(562, 314)
 
 [node name="Pawn" parent="." instance=ExtResource("3_ncf6w")]
-position = Vector2(481, 430)
+position = Vector2(611, 488)
+
+[node name="Pawn2" parent="." instance=ExtResource("3_ncf6w")]
+position = Vector2(437, 571)
+
+[node name="Pawn3" parent="." instance=ExtResource("3_ncf6w")]
+position = Vector2(839, 561)
+
+[node name="Pawn4" parent="." instance=ExtResource("3_ncf6w")]
+position = Vector2(738, 423)
