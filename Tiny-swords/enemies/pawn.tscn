@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://y2irie4w0xon"]
+
+[ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="1_4g2i3"]
+[ext_resource type="Texture2D" uid="uid://drf3f2enjrvxl" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="1_82s8u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tt7nn"]
+atlas = ExtResource("1_82s8u")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpbh4"]
+atlas = ExtResource("1_82s8u")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5niqc"]
+atlas = ExtResource("1_82s8u")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ua8yo"]
+atlas = ExtResource("1_82s8u")
+region = Rect2(576, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrx8x"]
+atlas = ExtResource("1_82s8u")
+region = Rect2(768, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yak2"]
+atlas = ExtResource("1_82s8u")
+region = Rect2(960, 192, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6yuhg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tt7nn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpbh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5niqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ua8yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrx8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yak2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_emj1p"]
+radius = 19.0
+height = 48.0
+
+[node name="Pawn" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_4g2i3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -26)
+sprite_frames = SubResource("SpriteFrames_6yuhg")
+autoplay = "default"
+frame_progress = 0.0124175
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -26)
+shape = SubResource("CapsuleShape2D_emj1p")
