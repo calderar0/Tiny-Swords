@@ -30,7 +30,8 @@ func _process(delta: float) -> void:
 	update_attack_cooldown(delta)
 	#processa animação e rotação
 	play_run_idle_animation()
-	rotate_sprite()
+	if not is_attacking:
+		rotate_sprite()
 	#sistema de ataque
 	if Input.is_action_just_pressed("attack"):
 		attack(input_vector)
@@ -128,8 +129,20 @@ func attack(input_vector) -> void:
 
 func deal_damage_to_enemies() -> void:
 	var bodies = sword_area.get_overlapping_bodies()
+	var animation_list = animation_player.get_animation_list()
 	for body in bodies:
 		if body.is_in_group("enemies"):
 			var enemy: Enemy = body
-			enemy.damage(sword_damage)
-
+			var direction_to_enemy = (enemy.position - position).normalized()
+			var attack_direction: Vector2
+			if sprite.flip_h:
+				attack_direction = Vector2.LEFT
+			else:
+				attack_direction = Vector2.RIGHT
+			if sprite.frame_coords.y == 4 || sprite.frame_coords.y == 5:
+				attack_direction = Vector2.DOWN
+			elif sprite.frame_coords.y == 6 || sprite.frame_coords.y == 7:
+				attack_direction = Vector2.UP
+			var dot_product = direction_to_enemy.dot(attack_direction)
+			if dot_product >= 0.4:
+				enemy.damage(sword_damage)
