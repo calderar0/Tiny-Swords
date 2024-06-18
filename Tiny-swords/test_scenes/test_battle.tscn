@@ -10,3 +10,12 @@ position = Vector2(602, 347)
 
 [node name="Pawn" parent="." instance=ExtResource("2_1ytfb")]
 position = Vector2(1314, 739)
+
+[node name="Pawn2" parent="." instance=ExtResource("2_1ytfb")]
+position = Vector2(654, 999)
+
+[node name="Pawn3" parent="." instance=ExtResource("2_1ytfb")]
+position = Vector2(76, 983)
+
+[node name="Pawn4" parent="." instance=ExtResource("2_1ytfb")]
+position = Vector2(1482, 43)

@@ -126,7 +126,6 @@ func attack(input_vector) -> void:
 	#marca ataque
 	is_attacking = true
 
-
 func deal_damage_to_enemies() -> void:
 	var bodies = sword_area.get_overlapping_bodies()
 	var animation_list = animation_player.get_animation_list()
@@ -144,5 +143,5 @@ func deal_damage_to_enemies() -> void:
 			elif sprite.frame_coords.y == 6 || sprite.frame_coords.y == 7:
 				attack_direction = Vector2.UP
 			var dot_product = direction_to_enemy.dot(attack_direction)
-			if dot_product >= 0.4:
+			if dot_product >= 0.35:
 				enemy.damage(sword_damage)
