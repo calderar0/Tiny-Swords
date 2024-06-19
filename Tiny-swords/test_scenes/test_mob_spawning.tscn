@@ -9,4 +9,3 @@
 position = Vector2(588, 363)
 
 [node name="MobSpawner" parent="." instance=ExtResource("2_3oyic")]
-mobs_per_minute = 300.0
