@@ -256,7 +256,7 @@ radius = 98.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_f04kq"]
 radius = 44.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_m4bc2")
 death_prefab = ExtResource("2_jms16")

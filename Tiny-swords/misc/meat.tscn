@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://drhk0n7a27nrc"]
+
+[ext_resource type="Texture2D" uid="uid://wyckcsmsnog0" path="res://addons/Tiny Swords/Resources/Resources/M_Spawn.png" id="1_mnamq"]
+[ext_resource type="Script" path="res://misc/life_regenerator.gd" id="2_ih3ds"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsudh"]
+atlas = ExtResource("1_mnamq")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr3os"]
+atlas = ExtResource("1_mnamq")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0v501"]
+atlas = ExtResource("1_mnamq")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asc8d"]
+atlas = ExtResource("1_mnamq")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaud0"]
+atlas = ExtResource("1_mnamq")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2etth"]
+atlas = ExtResource("1_mnamq")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r24oe"]
+atlas = ExtResource("1_mnamq")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_flp3k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsudh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yr3os")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0v501")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asc8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaud0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2etth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r24oe")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jab88"]
+radius = 30.0167
+
+[node name="Meat" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_flp3k")
+autoplay = "default"
+frame = 6
+frame_progress = 1.0
+offset = Vector2(0, -30)
+script = ExtResource("2_ih3ds")
+regeneration_amount = 20
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_jab88")
