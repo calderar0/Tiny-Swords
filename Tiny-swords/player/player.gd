@@ -19,6 +19,7 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sword_area: Area2D = $SwordArea
 @onready var hitbox_area: Area2D = $HitboxArea
+@onready var progress_bar: ProgressBar = $HealthProgressBar
 
 #variáveis comuns player
 var input_vector: Vector2 = Vector2(0 , 0)
@@ -35,6 +36,11 @@ var random_down = 1
 var random_down2 = 2
 var random_side = 1
 var random_side2 = 2
+
+signal meat_collected(value: int)
+
+func _ready():
+	GameManager.player = self
 
 func _process(delta: float) -> void:
 	#game manager
@@ -54,7 +60,9 @@ func _process(delta: float) -> void:
 	update_hitbox_detection(delta)
 	#ritual
 	update_ritual(delta)
-
+	#atualiza a vida
+	progress_bar.max_value = max_health
+	progress_bar.value = health
 
 func update_ritual(delta: float) -> void:
 	#seta tempo
@@ -216,5 +224,4 @@ func heal(amount: int) -> int:
 	health += amount
 	if health >= max_health:
 		health = max_health
-	print("Player curou ", amount, " vida atual: ", health, " de ", max_health)
 	return health
