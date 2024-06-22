@@ -41,7 +41,7 @@ Durante o desenvolvimento deste projeto, aprendi:
 
 **Arts by** [Pixel Frog, Tiny Swords](https://pixelfrog-assets.itch.io/tiny-swords) , [CC0 1.0 UNIVERSAL](https://creativecommons.org/publicdomain/zero/1.0/). 
 
-**Arts by**. [Kenney, Particle Pack](https://www.kenney.nl/assets/particle-pack) , [CC0 1.0 UNIVERSAL](https://creativecommons.org/publicdomain/zero/1.0/). 
+**Arts by** [Kenney, Particle Pack](https://www.kenney.nl/assets/particle-pack) , [CC0 1.0 UNIVERSAL](https://creativecommons.org/publicdomain/zero/1.0/). 
 
 
 ## Contato
@@ -50,4 +50,4 @@ Se você tiver alguma dúvida ou quiser discutir mais sobre o projeto:
 
 [Felipe Calderaro](https://www.linkedin.com/in/felipe-calderaro/) - felipecalderaro28@gmail.com
 
-Link do Projeto: [(https://github.com/calderar0/godot-hello-world)](https://github.com/calderar0/godot-hello-world) <br>
+Link do Projeto: [(https://github.com/calderar0/Tiny-Swords)](https://github.com/calderar0/Tiny-Swords) <br>
