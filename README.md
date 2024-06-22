@@ -1,4 +1,4 @@
-# Tiny Swords
+# Tiny Warrior
 Jogo em visão top-down de um Herói. Feito a partir do curso de desenvolvimento de jogos com GODOT da DIO em parceria com Santander.
 # 
 Este é um projeto desenvolvido em GDScript utilizando a plataforma GODOT, baseado no jogo ensinado pelo curso da DIO. O objetivo do projeto é introduzir conceitos adicionais aos projetos ao desenvolver um jogo na visão top-down no estilo de vampire survivors.
@@ -50,4 +50,5 @@ Se você tiver alguma dúvida ou quiser discutir mais sobre o projeto:
 
 [Felipe Calderaro](https://www.linkedin.com/in/felipe-calderaro/) - felipecalderaro28@gmail.com
 
-Link do Projeto: [(https://github.com/calderar0/Tiny-Swords)](https://github.com/calderar0/Tiny-Swords) <br>
+Links do Projeto: [(https://github.com/calderar0/Tiny-Swords)](https://github.com/calderar0/Tiny-Swords) <br>
+                  [https://calderaro.itch.io/tiny-warrior](https://calderaro.itch.io/tiny-warrior)
