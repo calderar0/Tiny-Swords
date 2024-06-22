@@ -1,3 +1,4 @@
+class_name MobSpawner
 extends Node2D
 
 @export var creatures: Array[PackedScene]
