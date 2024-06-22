@@ -50,5 +50,5 @@ Se você tiver alguma dúvida ou quiser discutir mais sobre o projeto:
 
 [Felipe Calderaro](https://www.linkedin.com/in/felipe-calderaro/) - felipecalderaro28@gmail.com
 
-Links do Projeto:<br> [https://github.com/calderar0/Tiny-Swords](https://github.com/calderar0/Tiny-Swords) <br>
+Links do Projeto:<br> [https://github.com/calderar0/Tiny-Warrior](https://github.com/calderar0/Tiny-Warrior) <br>
                   [https://calderaro.itch.io/tiny-warrior](https://calderaro.itch.io/tiny-warrior)
