@@ -51,4 +51,4 @@ Se você tiver alguma dúvida ou quiser discutir mais sobre o projeto:
 [Felipe Calderaro](https://www.linkedin.com/in/felipe-calderaro/) - felipecalderaro28@gmail.com
 
 Links do Projeto:<br> **github** [https://github.com/calderar0/Tiny-Warrior](https://github.com/calderar0/Tiny-Warrior) <br>
-**itch.io* [https://calderaro.itch.io/tiny-warrior](https://calderaro.itch.io/tiny-warrior)
+**itch.io** [https://calderaro.itch.io/tiny-warrior](https://calderaro.itch.io/tiny-warrior)
