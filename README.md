@@ -1,7 +1,6 @@
 # Tiny Swords
 Jogo em visão top-down de um Herói. Feito a partir do curso de desenvolvimento de jogos com GODOT da DIO em parceria com Santander.
-# Greedy Hero
-
+# 
 Este é um projeto desenvolvido em GDScript utilizando a plataforma GODOT, baseado no jogo ensinado pelo curso da DIO. O objetivo do projeto é introduzir conceitos adicionais aos projetos ao desenvolver um jogo na visão top-down no estilo de vampire survivors.
 
 ## Descrição
