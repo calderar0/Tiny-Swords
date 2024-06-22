@@ -39,9 +39,9 @@ Durante o desenvolvimento deste projeto, aprendi:
 
 ## Copying
 
-**Arts by ** [Pixel Frog, Tiny Swords](https://pixelfrog-assets.itch.io/tiny-swords), [CC0 1.0 UNIVERSAL](https://creativecommons.org/publicdomain/zero/1.0/). 
+**Arts by** [Pixel Frog, Tiny Swords](https://pixelfrog-assets.itch.io/tiny-swords) , [CC0 1.0 UNIVERSAL](https://creativecommons.org/publicdomain/zero/1.0/). 
 
-**Arts by **. [Kenney, Particle Pack](https://www.kenney.nl/assets/particle-pack), [CC0 1.0 UNIVERSAL](https://creativecommons.org/publicdomain/zero/1.0/). 
+**Arts by**. [Kenney, Particle Pack](https://www.kenney.nl/assets/particle-pack) , [CC0 1.0 UNIVERSAL](https://creativecommons.org/publicdomain/zero/1.0/). 
 
 
 ## Contato
