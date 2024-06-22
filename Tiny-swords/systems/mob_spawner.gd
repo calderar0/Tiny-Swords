@@ -2,7 +2,7 @@ class_name MobSpawner
 extends Node2D
 
 @export var creatures: Array[PackedScene]
-@export var mobs_per_minute: float = 60.0
+var mobs_per_minute: float = 60.0
 
 @onready var path_follow_2d: PathFollow2D = %PathFollow2D
 
@@ -10,6 +10,8 @@ var cooldown: float = 0.0
 
 
 func _process(delta):
+	#game acabou pae, sem mais monstros
+	if GameManager.is_game_over: return
 	#cooldown [temporizador]
 	cooldown -= delta
 	if cooldown > 0 : return
