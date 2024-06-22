@@ -144,6 +144,7 @@ debug_color = Color(0.955473, 0.212648, 7.70092e-07, 0.42)
 
 [node name="Player" parent="." instance=ExtResource("1_7xhsp")]
 position = Vector2(578, 336)
+ritual_damage = 3
 
 [node name="RemoteTransform2D - Camera" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
