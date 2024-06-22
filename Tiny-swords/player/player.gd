@@ -208,7 +208,7 @@ func damage(amount: int) -> void:
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_IN)
 	tween.set_trans(Tween.TRANS_QUINT)
-	tween.tween_property(self, "modulate", Color.WHITE, 0.3)
+	tween.tween_property(self, "modulate", Color.WHITE, 0.4)
 	#ve se ta morto
 	if health <= 0:
 		die()

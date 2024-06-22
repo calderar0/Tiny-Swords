@@ -20,7 +20,7 @@ func _process(delta):
 	var world_state = get_world_2d().direct_space_state
 	var parameters = PhysicsPointQueryParameters2D.new()
 	parameters.position = point
-	parameters.collision_mask = 0b1001 # testa só a camada 4 da colisão!!! le de trás pra frente
+	parameters.collision_mask = 0b1001 # testa certas camadas da colisão!!! le de trás pra frente
 	var result: Array = world_state.intersect_point(parameters, 1)
 	if not result.is_empty(): return
 	#mob aleatório
